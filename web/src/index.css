@@ -1,0 +1,128 @@
+@import "tailwindcss";
+
+* {
+  box-sizing: border-box;
+}
+
+.radix-themes {
+  --default-font-family: "InterVariable", serif;
+}
+
+:root {
+  font-family:
+    "InterVariable", sans-serif, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+
+  color-scheme: light;
+  /* color: rgba(255, 255, 255, 0.87); */
+  /* background-color: #242424; */
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* --space-2: 0.3rem;
+  --radius-1: 0.125rem;
+  --radius-full: 9999px; */
+}
+
+body,
+.root {
+  background-color: #f5f5f5;
+}
+
+#portalcontainer {
+  position: relative;
+  z-index: 10;
+}
+/* style for radix ui */
+
+:root,
+.light,
+.light-theme {
+  --accent-1: #fcfcfd;
+  --accent-2: #f9f9fb;
+  --accent-3: #eff0f3;
+  --accent-4: #e7e8ec;
+  --accent-5: #e0e1e6;
+  --accent-6: #d8d9e0;
+  --accent-7: #cdced6;
+  --accent-8: #b9bbc6;
+  --accent-9: #000;
+  --accent-10: #2c2d33;
+  --accent-11: #62636c;
+  --accent-12: #1e1f24;
+
+  --accent-a1: #00005503;
+  --accent-a2: #00005506;
+  --accent-a3: #00104010;
+  --accent-a4: #000b3618;
+  --accent-a5: #0009321f;
+  --accent-a6: #00073527;
+  --accent-a7: #00062e32;
+  --accent-a8: #00083046;
+  --accent-a9: #000000;
+  --accent-a10: #000109d3;
+  --accent-a11: #0002119d;
+  --accent-a12: #000107e1;
+
+  --accent-contrast: #fff;
+  --accent-surface: #f8f8facc;
+  --accent-indicator: #000;
+  --accent-track: #000;
+}
+
+@supports (color: color(display-p3 1 1 1)) {
+  @media (color-gamut: p3) {
+    :root,
+    .light,
+    .light-theme {
+      --accent-1: oklch(99.1% 0.0014 276.9);
+      --accent-2: oklch(98.2% 0.0028 276.9);
+      --accent-3: oklch(95.6% 0.0043 276.9);
+      --accent-4: oklch(93.1% 0.0058 276.9);
+      --accent-5: oklch(91% 0.0073 276.9);
+      --accent-6: oklch(88.7% 0.0088 276.9);
+      --accent-7: oklch(85.3% 0.0112 276.9);
+      --accent-8: oklch(79.4% 0.0152 276.9);
+      --accent-9: oklch(0% 0 none);
+      --accent-10: oklch(30% 0.0093 276.9);
+      --accent-11: oklch(50.3% 0.0131 276.9);
+      --accent-12: oklch(24.2% 0.0093 276.9);
+
+      --accent-a1: color(display-p3 0.0235 0.0235 0.349 / 0.012);
+      --accent-a2: color(display-p3 0.0235 0.0235 0.349 / 0.024);
+      --accent-a3: color(display-p3 0.0078 0.0667 0.2549 / 0.063);
+      --accent-a4: color(display-p3 0.0118 0.051 0.2157 / 0.095);
+      --accent-a5: color(display-p3 0.0039 0.0392 0.2 / 0.122);
+      --accent-a6: color(display-p3 0.0039 0.0275 0.1804 / 0.153);
+      --accent-a7: color(display-p3 0.0078 0.0275 0.1647 / 0.197);
+      --accent-a8: color(display-p3 0.0039 0.0314 0.1765 / 0.275);
+      --accent-a9: color(display-p3 0 0 0);
+      --accent-a10: color(display-p3 0 0.0039 0.0275 / 0.828);
+      --accent-a11: color(display-p3 0 0.0078 0.0588 / 0.616);
+      --accent-a12: color(display-p3 0 0.0039 0.0275 / 0.883);
+
+      --accent-contrast: #fff;
+      --accent-surface: color(display-p3 0.9725 0.9725 0.9804 / 0.8);
+      --accent-indicator: oklch(0% 0 none);
+      --accent-track: oklch(0% 0 none);
+    }
+  }
+}
+
+@theme {
+  --animate-slideIn: slideIn 0.18s ease-out;
+
+  @keyframes slideIn {
+    0% {
+      transform: translateX(70px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+}

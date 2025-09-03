@@ -1,0 +1,31 @@
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 160px;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  gap: 12px;
+  height: 100vh;
+  overflow-y: auto;
+
+  p {
+    color: #787878;
+  }
+
+  a:hover {
+    color: #575757;
+  }
+
+  :global .active {
+    color: #1b842e;
+  }
+}
+
+.main {
+  background: white;
+  min-height: 100vh;
+  margin-top: calc(58px);
+}

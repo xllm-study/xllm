@@ -1,0 +1,12 @@
+.removeFromListBtn {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+
+  &:not(:hover):not(:focus):not(:active) {
+    background-color: transparent;
+  }
+
+  &[data-hidden="true"] {
+    display: none;
+  }
+}
